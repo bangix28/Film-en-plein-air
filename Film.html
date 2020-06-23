@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Titre du film</title>
+</head>
+<body class="cloud">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom" id="navbarColor01">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo.png" alt="logo du site"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FilmsList.html">Films</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Acceuil</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container mt-5 border rounded">
+        <article>
+            <h1 class="text-center">Titre du film!</h1>
+            <img class="mx-auto d-block img-fluid mt-5" src="assets/img/test.svg" alt="image de l'article">
+            <p class="mt-5">Résumé du film :Maecenas justo nisl, posuere sit amet diam in, lacinia bibendum erat. Morbi imperdiet auctor risus
+                nec lacinia. In in convallis tortor. Morbi lacus urna, posuere sit amet augue nec, tristique posuere
+                magna. Fusce dignissim ultrices volutpat. Duis malesuada tellus condimentum, molestie ipsum vel,
+                iaculis orci. Proin posuere diam est, ut euismod mi pulvinar non. Nam ut fermentum nisl, ac
+                efficitur ante. Nullam arcu magna, aliquam id nulla at, finibus semper eros. Mauris vehicula, nibh
+                semper egestas vestibulum, eros urna ullamcorper tellus, quis placerat erat erat at urna. Fusce
+                efficitur, nisi eu convallis facilisis, velit sem posuere elit, non venenatis tortor neque sit amet
+                lacus. Duis tincidunt quam orci, ut rhoncus tortor eleifend quis. Donec aliquam mollis fringilla.
+                Sed nibh arcu, malesuada a tincidunt ut, porttitor eget risus.</p>
+            <form>
+                <fieldset>
+                    <legend>Réservez des places</legend>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" required class="form-control" id="Email" placeholder="Entrer votre email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Nom</label>
+                        <input type="text" class="form-control" id="Name" placeholder="Nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Prénom</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Prénom">
+                    </div>
+                    <div class="form-group">
+                        <label for="seance">Example select</label>
+                        <select class="form-control" id="seance">
+                            <optgroup label="5 Août 2020">
+                                <option>Séance 1</option>
+                                <option>Séance 2</option>
+                                <option>Séance 3</option>
+                            </optgroup>
+                            <optgroup label="6 Août 2020">
+                            <option>Séance 4</option>
+                            <option>Séance 5</option>
+                            </optgroup>
+                        </select>
+                        <div class="text-center">
+                        <h2>Nombre de place</h2>
+                        <div class="">
+                            <p><button class="btn button-blue" onclick="a()">+</button>
+                                <span id="clicks" class="bigInt">0</span>
+                                <button class="btn button-blue" onclick="b()">-</button>
+                            </p>
+                        </div>
+                        <button type="submit" class="btn button-red">Reserver</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </article>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="d-flex justify-content-between mt-5">
+            <div class="border-right">
+                <h2>Adresse</h2>
+                <p>3 Avenue des Champs Elysées</p>
+                <p>72250 Brette-les-Pins</p>
+            </div>
+            <div class="ml-auto border-left">
+                <h2>Télephone</h2>
+                <p>06.87.59.25.14</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    let clicks = 0;
+    function a() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    }
+    function b() {
+        if (clicks !== 0)
+        {
+            clicks -= 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        }
+
+    }
+</script>
+</body>
+</html>
