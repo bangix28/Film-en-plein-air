@@ -19,3 +19,12 @@ h1,h2,p
 {
     color: #2C3E50;
 }
+.card
+{
+    background-color: #ffffff;
+}
+.map
+{
+    margin: 0 auto;
+    display: block;
+}
