@@ -20,6 +20,7 @@ max-width: 25%;
 h1,h2,p
 {
     color: #2C3E50;
+    font-family: 'Playfair Display', serif;
 }
 .card
 {
